@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root{
+    --primary: #0d6efd;
+    --dark: #242936;
+    --body:#888;
+    --box-shadow:0 8px 22px rgba(0,0,0,0.2);
+}
+body{
+    font-family: 'Sora', sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+    
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4{
+    color: var(--dark);
+    font-weight:700;
+}
+a{
+    color:var(--dark);
+    text-decoration: none;
+}
+
+section{
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.navber_retu{
+    background-color:var(--dark);
+    padding:10px;
+    display: flex;
+    align-items: center;
+}
+.navber_retu a{
+    color: #ffffff;
+}
+
+.navber_retu a:hover{
+    color: #0d6efd !important;
+}
+
+
+.navbar .nav-link{
+    color:#fff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 16px;
+    padding-left: 10px;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.navbar img{
+    top: 10px;
+    left: 10px;
+    width: 50px; /* ロゴの幅 */
+    height: auto; /* ロゴの高さを自動調整 */
+    margin: 0 aout;
+}
+.btn{
+    padding: 10px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+
+
+
+/* hero section */
+.hero{
+    background-image: url(img/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+    height: 100dvh;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(37,39,71,0.7);
+    z-index: -1;
+}
+
+.card-effect{
+    box-shadow:var(--box-shadow) ;
+    background-color:var(--primary);
+    padding: 10px 0px;
+    transition: all 0.35s ease;
+    width: 100%;
+    height: 100%;
+    border: #000 solid 2px;
+}
+
+.contena{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+.card-effect:hover{
+    box-shadow:none;
+    transform:translateY(5px);
+}
+
+.card-container{
+    text-align: center;
+}
+
+
+
+.iconbox{
+    width:54px;
+    height: 54px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100px;
+    background-color: var(--primary);
+    flex: none;
+
+}
+
+.mission{
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.mission::after{
+    content:"";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+
+.mission:hover h5,
+.mission:hover p {
+    color: white;
+}
+
+.mission:hover .iconbox{
+    background-color: #fff;
+    color: var(--primary);
+   
+}
+.subtitle{
+    display: flex;
+}
+
+.setumei1{
+    position: absolute;
+    top: 73%;
+    width: 70%;
+}
+.mission:hover::after{
+    opacity: 1;
+    top:0;
+}
+
+.tyouhoukei{
+    width: 8px;
+    height: 25px;
+    background-color: #0d6efd;
+    margin-right: 5px;
+}
+
+.col-img{
+    background-image: url(/img/キャラクター.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+
+
+
+.overlay p{
+    color: #d8d6d6;
+}
+
+.bulu-squea{
+    background-color: #0d6efd;
+    width: 100%;
+    height: 80%;
+    padding: 10%;
+}
+
+
+
+/* Pictures section */
+.project{
+    position: relative;
+}
+
+.project .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37,39,71,0.7);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.4s ease;
+  
+}
+.project {
+    height: 500px; /* 表示する高さを適宜調整してください */
+    overflow: hidden;
+  }
+  
+  .project img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%; /* 高さを100%に設定して親要素に合わせます */
+  }
+img{
+    width: 100%;
+}
+
+.project img{
+    transition: all 0.7s ease;
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project:hover .overlay{
+    opacity: 1;
+}
+
+/* work section */
+.work_card p{
+    font-size: small;
+}
+
+.work_card img{
+    padding: 30px;
+}
+
+
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin-left: 5px;
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover{
+    color: var(--primary);
+    background-color: transparent;
+
+}
+
+/* contact section */
+
+form input.form-control{
+    height: 56px;
+
+}
+
+form .form-control{
+    border: transparent;
+    border-radius: 0;
+    background-color: rgba(231, 229, 229, 0.6);
+
+}
+
+
+.footer-top{
+    background-color:var(--dark);
+    padding:30px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-top a{
+    color:#fff;
+}
+
+.footer-top a:hover{
+    color:#0d6efd;
+}
+
+.footer-top img{
+    top: 20px;
+    left: 10px;
+    width: 70px; /* ロゴの幅 */
+    height: auto; /* ロゴの高さを自動調整 */
+    margin: 0 aout;
+}
+
+.bunn{
+    padding: 0% 10%;
+    text-align: center;
+}
+
+.join_us{
+    background-color: #9ea4d9ce;
+}
+
+.work_back{
+    background-color: #0d6efd;
+    padding: 15px;
+    border-radius: 100px;
+    margin: 10px auto;
+    max-width: 350px;
+
+}
+
+
+.image-overlay-container {
+    position: relative;
+    
+
+  }
+  
+  .background-image {
+    display: block;
+    width: 100%;
+    opacity: 0.5; /* 画像の透明度を設定 */
+    height: 70%;
+    
+  }
+  
+  .form-overlay {
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 100px;
+  }
+
+  .sucsece{
+    
+    background-color:#242936;
+    border: 2px solid;
+    border-color: #16c255;
+    padding: 20px;
+    margin-top: 20px;
+   
+  }
+
+  .footer_retu{
+    margin-top: 30px;
+  }
+
+  .btn-primary:hover {
+    color: var(--primary) !important; /* ホバー時のテキストの色を白に変更 */
+    background-color:#fff!important; /* ホバー時の背景色を青に変更 */
+  }
+
+  /* animation1 */
+
+    .animation1 {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 1.5s ease;
+        
+    }
+    .animation1.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* animation2 */
+
+    .animation2 {
+        opacity: 0;
+        transition: opacity 1s ease; /* opacity のみでフェイドイン効果を実現 */
+    }
+    .animation2.active {
+        opacity: 1;
+    }
+
+    /* animation3 */
+
+    .animation3 {
+        opacity: 0;
+        transform: translateX(10%);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+    .animation3.active {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+
+/* 写真配置用 */
+      .p-container {
+        max-width: 1200px; /* 必要に応じてコンテナの最大幅を調整 */
+        margin: 4px auto;
+    
+      }
+      
+      .p-row {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .p-col {
+        flex-basis: calc(33.33% - 4px); /* 必要に応じてカラムの幅を調整 */
+        
+      }
+      
+      .square {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /* アスペクト比を1:1に設定 */
+        overflow: hidden;
+
+      }
+
+      .square img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+
+       /* * {
+        outline: 2px solid blue;
+      }      */
+
+    .cool {
+        position: relative;
+        overflow: hidden;
+        padding: 1.5rem 2rem 1.5rem 45%;
+        border: 2px solid #000;
+      }
+      
+      .cool:before {
+        position: absolute;
+        top: -150%;
+        left: -100px;
+        width: 200px;
+        height: 300%;
+        content: '';
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+        background:#0d6efd;
+      }
+      
+      .cool span {
+       
+        font-size: 3.2rem;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: block;
+        padding-top: 8px;
+        padding-left: 10px;
+        color: #fff;
+      }
+
+      .cool2 {
+        margin-top: 1rem;
+        padding: 1rem 3rem;
+        color: #fff;
+        border-radius: 100vh;
+        background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+        background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+        background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+      }
+      
