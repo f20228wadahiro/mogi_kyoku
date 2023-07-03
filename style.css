@@ -78,7 +78,7 @@ section{
 
 /* hero section */
 .hero{
-    background-image: url(https://github.com/f20228wadahiro/mogi_kyoku/blob/main/img/cover.JPG?raw=true);
+    background-image: url("https://github.com/f20228wadahiro/mogi_kyoku/blob/main/img/cover.JPG?raw=true");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -188,7 +188,7 @@ section{
 }
 
 .col-img{
-    background-image: url(https://github.com/f20228wadahiro/mogi_kyoku/blob/main/img/キャラクター.png?raw=true);
+    background-image: url("https://github.com/f20228wadahiro/mogi_kyoku/blob/main/img/キャラクター.png?raw=true");
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
